@@ -75,4 +75,48 @@ print(f'Dear {invites[3]}, it would be a pleasure to eat dinner with us tomorrow
 # Print a new set of invitation messages, one for each person in your list.
 print(f'Dear {invites[0]} {invites[1]} {invites[2]} and {invites[3]}, i have found a bigger table so i will be inviting more people to it.')
 invites.insert(0,"Micheal Jackson")
-invites.insert(2,"")
+invites.insert(2,"Ryan Gosling")
+invites.append("Jeffrey Epstein")
+print(f'Dear {invites[0]}, it would be a pleasure to eat dinner with us tomorrow night.')
+print(f'Dear {invites[1]}, it would be a pleasure to eat dinner with us tomorrow night.')
+print(f'Dear {invites[2]}, it would be a pleasure to eat dinner with us tomorrow night.')
+print(f'Dear {invites[3]}, it would be a pleasure to eat dinner with us tomorrow night.')
+print(f'Dear {invites[4]}, it would be a pleasure to eat dinner with us tomorrow night.')
+print(f'Dear {invites[5]}, it would be a pleasure to eat dinner with us tomorrow night.')
+print(f'Dear {invites[6]}, it would be a pleasure to eat dinner with us tomorrow night.')
+
+#3.7 You just found out that your new dinner table won’t arrive in time for the dinner, and now you have space for only two guests.
+# Start with your program from Exercise 3-6. 
+# Add a new line that prints a message saying that you can invite only two people for dinner.
+# Use pop() to remove guests from your list one at a time until only two names remain in your list. 
+# Each time you pop a name from your list, print a message to that person letting them know you’re sorry you can’t invite them to dinner.
+# Print a message to each of the two people still on your list, letting them know they’re still invited.
+# Use del to remove the last two names from your list, so you have an empty list. Print your list to make sure you actually have an empty list at the end of your program.
+print("Im sorry guys but only 2 people can join for dinner")
+print(f'{invites[6]} you cannot come to the dinner table for selective purpose')
+invites.pop(6)
+print(f'{invites[5]} you cannot come to the dinner table for selective purpose')
+invites.pop(5)
+print(f'{invites[4]} you cannot come to the dinner table for selective purpose')
+invites.pop(4)
+print(f'{invites[3]} you cannot come to the dinner table for selective purpose')
+invites.pop(3)
+print(f'{invites[2]} you cannot come to the dinner table for selective purpose')
+invites.pop(2)
+print(f'{invites[0]} you can still come if you want')
+print(f'{invites[1]} you can still come if you want')
+del invites
+
+#3.8 Think of at least five places in the world you’d like to visit.
+# Store the locations in a list. Make sure the list is not in alphabetical order.
+# Print your list in its original order. Don’t worry about printing the list neatly; just print it as a raw Python list.
+# Use sorted() to print your list in alphabetical order without modifying the actual list.
+# Show that your list is still in its original order by printing it.
+# Use sorted() to print your list in reverse-alphabetical order without changing the order of the original list.
+# Show that your list is still in its original order by printing it again.
+# Use reverse()  to change the order of your list. Print the list to show that its order has changed.
+# Use reverse() to change the order of your list again. Print the list to show it’s back to its original order.
+# Use sort() to change your list so it’s stored in alphabetical order. Print the list to show that its order has been changed.
+# Use sort() to change your list so it’s stored in reverse-alphabetical order.
+# Print the list to show that its order has changed.
+favorite_locations=["Tokyo","Denmark",]
