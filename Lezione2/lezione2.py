@@ -119,4 +119,130 @@ del invites
 # Use sort() to change your list so it’s stored in alphabetical order. Print the list to show that its order has been changed.
 # Use sort() to change your list so it’s stored in reverse-alphabetical order.
 # Print the list to show that its order has changed.
-favorite_locations=["Tokyo","Denmark",]
+favorite_locations=["Tokyo","Denmark","Norway","Ireland","New Zealand"]
+print(favorite_locations)
+print(sorted(favorite_locations))
+print(favorite_locations)
+print(sorted(favorite_locations,reverse=True))
+print(favorite_locations)
+favorite_locations.reverse()
+print(favorite_locations)
+favorite_locations.reverse()
+print(favorite_locations)
+favorite_locations.sort()
+print(favorite_locations)
+favorite_locations.sort(reverse=True)
+print(favorite_locations)
+
+#3.9 Working with one of the programs from Exercises 3,
+#use len() to print a message indicating the number of people you’re inviting to dinner.
+print(len(invites2))
+
+#3.10 Think of things you could store in a list.
+#For example, you could make a list of mountains, rivers, countries, cities, languages, or anything else you’d like. 
+#Write a program that creates a list containing these items and then uses each function introduced in this chapter at least once.
+countries=["Italy","Romania","Greece","Vatican City","France"]
+print(countries)
+countries.insert(1,"Malta")
+countries.append("Romania")
+countries.pop(2)
+del countries[3]
+sorted(countries)
+sorted(countries,reverse=True)
+countries.reverse()
+countries.reverse()
+countries.sort()
+countries.sort(reverse=True)
+
+#6.1 Use a dictionary to store information about a person you know.
+#Store their first name, last name, age, and the city in which they live.
+#You should have keys such as first_name, last_name, age, and city.
+#Print each piece of information stored in your dictionary.
+Information={"First Name":"Antonio","Last Name":"Zottola","Age":"19","City":"Pomezia"}
+
+#6.2 Use a dictionary to store people’s favorite numbers. 
+#Think of five names, and use them as keys in your dictionary. 
+#Think of a favorite number for each person, and store each as a value in your dictionary. 
+#Print each person’s name and their favorite number. 
+#For even more fun, poll a few friends and get some actual data for your program.
+Favorite_numbers={"Antony":"30","Luke":"12","Martin":"5"}
+print(Favorite_numbers["Antony"])
+print(Favorite_numbers["Luke"])
+print(Favorite_numbers["Martin"])
+
+#6.3 A Python dictionary can be used to model an actual dictionary. However, to avoid confusion, let’s call it a glossary.
+# Think of five programming words you’ve learned about in the previous chapters. Use these words as the keys in your glossary, and store their meanings as values.
+# Print each word and its meaning as neatly formatted output. You might print the word followed by a colon and then its meaning, or print the word on one line and then print its meaning indented on a second line. Use the newline character (\n) to insert a blank line between each word-meaning pair in your output.
+glossary={"Function":"a block of code which only runs when it is called","list":"A data structure that holds an ordered collection of items","Dictionary":"A data structure that stores key-value pairs"}
+for word, meaning in glossary.items():
+    print(f"{word}:\n{meaning}\n")
+
+#6.7 Start with the program you wrote for Exercise 6-1. 
+#Make two new dictionaries representing different people, and store all three dictionaries in a list called people.
+#Loop through your list of people. 
+#As you loop through the list, print everything you know about each person.
+Information2={"First Name":"Mirko","Last Name":"Alessandrini","Age":"35","City":"Roma"}
+Information3={"First Name":"Jordan","Last Name":"Carter","Age":"27","City":"Atlanta"}
+people=[Information,Information2,Information3]
+for person in people:
+    print("First Name",person["First Name"])
+    print("Last Name",person["Last Name"])
+    print("Age",person["Age"])
+    print("City",person["City"])
+
+#6.8 Make several dictionaries, where each dictionary represents a different pet. In each dictionary, include the kind of animal and the owner’s name. Store these dictionaries in a list called pets. Next, loop through your list and as
+#you do, print everything you know about each pet.
+dog={"Breed":"Shiba","Owner":"Antony"}
+cat={"Breed":"Sphynx","Owner":"Lucas"}
+rabbit={"Breed":"American Fuzzy Lop","Owner":"Tiffany"}
+pets=[dog,cat,rabbit]
+for animal in pets:
+    print("Breed",animal["Breed"])
+    print("Owner",animal["Owner"])
+
+#6.9 Make a dictionary called favorite_places.
+#Think of three names to use as keys in the dictionary, and store one to three favorite places for each person. 
+#To make this exercise a bit more interesting, ask some friends to name a few of their favorite places. 
+#Loop through the dictionary, and print each person’s name and their favorite places.
+favorite_places={"Jacob":"Oblock","Carl":"Mountains","Amanda":"Beach"}
+for word, meaning in favorite_places.items():
+    print(f"{word}:\n{meaning}\n")
+
+#6.10 Modify your program from Exercise 6-2 so each person can have more than one favorite number.
+# Then print each person’s name along with their favorite numbers.
+Antony=[15,35,40]
+Luke=[74,12,34]
+Martin=[32,12,68]
+print(f'Antony favorite numbers:{Antony[0]}, {Antony[1]} and {Antony[2]}')
+print(f'Luke favorite numbers:{Luke[0]}, {Luke[1]} and {Luke[2]}')
+print(f'Martin favorite numbers:{Martin[0]}, {Martin[1]} and {Martin[2]}')
+
+#6.11 Make a dictionary called cities.
+#Use the names of three cities as keys in your dictionary. 
+#Create a dictionary of information about each city and include the country that the city is in, its approximate population, and one fact about that city. 
+#The keys for each city’s dictionary should be something like country, population, and fact. Print the name of each city and all of the information you have stored about it.
+Madrid={"Country":"Spain","Population":"3mil","Fact":"has been the capital of spain since the 17th century"}
+Copenhagen={"Country":"Denmark","Population":"602k","Fact":"it is one of the oldest cities in scandinavia"}
+SãoPaulo={"Country":"Brazil","Population":"12mil","Fact":"it is the largest city in brazil by population"}
+cities=[Madrid,Copenhagen,SãoPaulo]
+for city in cities:
+    print("Country",city["Country"])
+    print("Population",city["Population"])
+    print("Fact:",city["Fact"])
+
+#6.12
+sumAntony=sum(Antony)
+sumLuke=sum(Luke)
+sumMartin=sum(Martin)
+
+numero_piu_alto=max(sumAntony,sumLuke,sumMartin)
+
+if numero_piu_alto==sumAntony:
+    print("Antony aveva i numeri piu alti")
+elif numero_piu_alto==sumLuke:
+    print("Luke aveva i numeri piu alti")
+else:
+    print("Martin avevi i numeri piu alti")
+
+
+
