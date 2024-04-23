@@ -168,13 +168,70 @@ print(sent_messages)
 # Call the function three times, using a different number of arguments each time.
 def sandwich():
     def make_sandwich(items):
-    print("I'll make you a great sandwich:")
+        print("I'll make you a great sandwich:")
     for item in items:
         print(f"adding {item} to your sandwich.")
     print("Your sandwich is ready!")
+    
 
 make_sandwich('roast beef', 'cheese', 'lettuce','tomato')
 make_sandwich('turkey', 'apple slices', 'honey mustard')
 make_sandwich('peanut butter', 'strawberry jam')
 
 #8.13 Build a profile of yourself by calling build_profile(), using your first and last names and three other key-value pairs that describe you. All the values must be passed to the function as parameters. The function then must return a string such as "Eric Crow, age 45, hair brown, weight 67"
+def build_profile(First_Last_Name,Age,Hair_color,Weight):
+    print(f'"{First_Last_Name},Age {Age},{Hair_color} Hair,Weight {Weight}"')
+build_profile("Antonio Zottola",19,"Brown","61kg")
+
+#8.14 Write a function that stores information about a car in a dictionary. 
+#The function should always receive a manufacturer and a model name. 
+#It should then accept an arbitrary number of keyword arguments. 
+#Call the function with the required information and two other name-value pairs, such as a color or an optional feature. 
+#Your function should work for a call like this one: car = make_car('subaru', 'outback', color='blue', tow_package=True) 
+#Print the dictionary that’s returned to make sure all the information was stored correctly.
+def make_car(manufacturer, model, **options):
+    car_dict = {
+        'manufacturer': manufacturer.title(),
+        'model': model.title(),
+        }
+    for option, value in options.items():
+        car_dict[option] = value
+
+    return car_dict
+
+my_outback = make_car('Tesla', 'Y', color='blue', tow_package=False)
+print(my_outback)
+
+my_accord = make_car('Tesla', 'Y', year=2024, color='blue',
+        height='1.624mm')
+print(my_accord)
+
+#8.15 Put the functions for the example printing_models.py in a separate file called printing_functions.py. 
+#Write an import statement at the top of printing_models.py, and modify the file to use the imported functions.
+def print_models(unprinted_designs, completed_models):
+    while unprinted_designs:
+        current_design = unprinted_designs.pop()
+    
+        # Simulate creating a 3d print from the design.
+        print("Printing model: " + current_design)
+        completed_models.append(current_design)
+        
+def show_completed_models(completed_models):
+    print("The following models have been printed:")
+    for completed_model in completed_models:
+        print(completed_model)
+
+import printing_functions as pf
+
+unprinted_designs = ['iphone case', 'robot pendant', 'dodecahedron']
+completed_models = []
+
+pf.print_models(unprinted_designs, completed_models)
+pf.show_completed_models(completed_models)
+
+#8.16 Using a program you wrote that has one function in it, store that function in a separate file. Import the function into your main program file, and call the function using each of these approaches:
+#import module_name
+#from module_name import function_name
+#from module_name import function_name as fn
+#import module_name as mn
+#from module_name import *
