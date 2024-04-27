@@ -128,7 +128,7 @@ def send_messages(messages, sent_messages):
         print(current_message)
         sent_messages.append(current_message)
 
-messages = ["hello there", "who are you", "hop on r6"]
+messages = ["hello there", "who are you", "why are you here"]
 show_messages(messages)
 
 sent_messages = []
@@ -153,7 +153,7 @@ def send_messages(messages, sent_messages):
         print(current_message)
         sent_messages.append(current_message)
 
-messages = ["hello there", "who are you", "hop on fortnite"]
+messages = ["hello there", "who are you", "come to my house"]
 show_messages(messages)
 
 sent_messages = []
@@ -208,30 +208,33 @@ print(my_accord)
 
 #8.15 Put the functions for the example printing_models.py in a separate file called printing_functions.py. 
 #Write an import statement at the top of printing_models.py, and modify the file to use the imported functions.
-def print_models(unprinted_designs, completed_models):
-    while unprinted_designs:
-        current_design = unprinted_designs.pop()
-    
-        # Simulate creating a 3d print from the design.
-        print("Printing model: " + current_design)
-        completed_models.append(current_design)
-        
-def show_completed_models(completed_models):
-    print("The following models have been printed:")
-    for completed_model in completed_models:
-        print(completed_model)
-
-import printing_functions as pf
-
-unprinted_designs = ['iphone case', 'robot pendant', 'dodecahedron']
-completed_models = []
-
-pf.print_models(unprinted_designs, completed_models)
-pf.show_completed_models(completed_models)
-
 #8.16 Using a program you wrote that has one function in it, store that function in a separate file. Import the function into your main program file, and call the function using each of these approaches:
 #import module_name
 #from module_name import function_name
 #from module_name import function_name as fn
 #import module_name as mn
 #from module_name import *
+#8.17 Choose any three programs you wrote for this chapter, and make sure they follow the styling guidelines described in this section.
+def city_country(city,country):
+    print(f'"{city}","{country}"')
+city_country("Santiago","Chile")
+city_country("Ottawa","Canada")
+city_country("Rome","Italy")
+
+def show_messages(messages):
+    for message in messages:
+        print(message)
+
+messages = ["hello there", "how you doin?", "what the heck"]
+show_messages(messages)
+
+def describe_city(city,country="Canada"):
+    print(f'{city} is in {country}')
+describe_city("Reykjavik","Iceland")
+describe_city("Toronto")
+describe_city("Ottawa")
+
+#School Grading System:
+#Create a function that takes a student's name and their scores in different subjects as input.
+#The function calculates the average score and prints the student's name, average, and a message indicating whether the student passed the exam (average >= 60) or failed.
+#Create a for loop to iterate over a list of students and scores, calling the function for each student.
