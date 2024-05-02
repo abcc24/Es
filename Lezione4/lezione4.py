@@ -110,7 +110,7 @@ def show_messages(messages):
     for message in messages:
         print(message)
 
-messages = ["hello there", "how you doin?", "what the heck"]
+messages = ["hello there", "who are you", "why are you here"]
 show_messages(messages)
 
 #8.10 Start with a copy of your program from Exercise 8-9.
@@ -153,7 +153,7 @@ def send_messages(messages, sent_messages):
         print(current_message)
         sent_messages.append(current_message)
 
-messages = ["hello there", "who are you", "come to my house"]
+messages = ["hello there", "who are you", "why are you here"]
 show_messages(messages)
 
 sent_messages = []
@@ -202,8 +202,7 @@ def make_car(manufacturer, model, **options):
 my_outback = make_car('Tesla', 'Y', color='blue', tow_package=False)
 print(my_outback)
 
-my_accord = make_car('Tesla', 'Y', year=2024, color='blue',
-        height='1.624mm')
+my_accord = make_car('Tesla', 'Y', year=2024, color='blue', height='1.624mm')
 print(my_accord)
 
 #8.15 Put the functions for the example printing_models.py in a separate file called printing_functions.py. 
@@ -225,7 +224,7 @@ def show_messages(messages):
     for message in messages:
         print(message)
 
-messages = ["hello there", "how you doin?", "what the heck"]
+messages = ["hello there", "how you doin?", "what"]
 show_messages(messages)
 
 def describe_city(city,country="Canada"):
@@ -234,7 +233,4 @@ describe_city("Reykjavik","Iceland")
 describe_city("Toronto")
 describe_city("Ottawa")
 
-#School Grading System:
-#Create a function that takes a student's name and their scores in different subjects as input.
-#The function calculates the average score and prints the student's name, average, and a message indicating whether the student passed the exam (average >= 60) or failed.
-#Create a for loop to iterate over a list of students and scores, calling the function for each student.
+    
