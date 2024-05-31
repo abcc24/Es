@@ -29,7 +29,7 @@ class Cinema:
     def __init__(self, lista_sale: list[int], lista_film: list[str]):
         self.lista_sale = lista_sale
         self.lista_film = lista_film
-
+        self.posti_pren = Sala
     def aggiungi_sala(self, sala: int):
 
         if sala in self.lista_sale:
@@ -40,11 +40,13 @@ class Cinema:
 
     def prenota_film(self, titolo_film: str, numero_posti: int):
 
-        a: Sala = Sala
-
         if titolo_film in self.lista_film:
-            if numero_posti > 
-
+            if numero_posti > self.posti_pren:
+                print("La prenotazione è stata eseguita")
+            else:
+                print("La sala è piena")
+        else:
+            print("Il film non è nelle sale")
 
 
 film1: Film = Film(titolo = "LOTR", durata = 3)
@@ -57,3 +59,4 @@ sala1.posti_disp()
 cinema1: Cinema = Cinema(lista_sale=[1,2,3,4])
 
 cinema1.aggiungi_sala(5)
+cinema1.prenota_film("LOTR", 30)
