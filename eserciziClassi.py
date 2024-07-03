@@ -60,3 +60,4 @@ cinema1: Cinema = Cinema(lista_sale=[1,2,3,4])
 
 cinema1.aggiungi_sala(5)
 cinema1.prenota_film("LOTR", 30)
+###
