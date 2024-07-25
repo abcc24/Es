@@ -1,0 +1,14 @@
+Dare la specifica dell'operazione 
+
+utenti_senza_bid(inizio: DataOra, fine: DataOra): Privato [0..*]
+
+dello use-case Ricerca.
+
+L'operazione deve restituire l'insieme degli utenti privati che non hanno effettuato alcun bid.
+
+
+utenti_senza_bid(inizio: DataOra, fine:DataOra): Privato [0..*]
+
+pre: nessuna
+
+post: 
